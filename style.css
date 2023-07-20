@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+body {
+    background-color: #e7e1e1;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/pattern-curve.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left 0px bottom 0px;
+}
+
+.carouse {
+    transition: all 40s ease-in-out;
+}
+
+.testimonials-container {
+    height: 400px;
+    width: 800px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+}
+
+
+#user-review {
+    height: 180px;
+    width: 400px;
+    z-index: 1;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-evenly;
+    margin-right: -200px;
+    background-image: url('./images/pattern-quotes.svg');
+    background-repeat: no-repeat;
+    background-position: top 0px left 50px;
+    padding: 20px 20px 0 25px;
+}
+
+#user-picture {
+    height: 360px;
+    width: 360px;
+    background-image: url('./images/pattern-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#user-picture>.img-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile-img {
+    box-shadow: 5px 5px 20px var(--Grayish-Blue);
+
+}
+
+#user-review span {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+#user-review span>#name {
+    font-weight: 700;
+    color: var(--Dark-Blue);
+}
+
+#user-review span>#position {
+    font-weight: 300;
+    color: var(--Grayish-Blue);
+}
+
+#review {
+    color: var(--Dark-Blue);
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.buttons {
+    width: 120px;
+    height: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    margin-top: -60px;
+    margin-left: 60px;
+    background-color: #feeaea;
+}
+
+.buttons>button {
+    height: 100%;
+    width: 50%;
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+}
+
+.prev-btn {
+    border-radius: 30px 0 0 30px;
+}
+
+.next-btn {
+    border-radius: 0 30px 30px 0;
+}
+
+@media screen and (max-width:800px) {
+    .testimonials-container {
+        width: 95%;
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width:730px) {
+    .testimonials-container {
+        flex-direction: column-reverse;
+    }
+
+    #user-review {
+        height: auto;
+        margin-top: 30px;
+        margin-right: 0px;
+        background-image: url('./images/pattern-quotes.svg');
+        background-repeat: no-repeat;
+        background-position: top 0px left 100px;
+        padding: 20px 20px 0 25px;
+        width: calc(initial + 100px);
+    }
+
+    #user-review span {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #user-review span>#name {
+        font-size: 1.1rem;
+    }
+
+    .buttons {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -30px;
+    }
+}
